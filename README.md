@@ -1,6 +1,6 @@
 # Symfony Docker + Kubernetes
 
-This is a copy from [dunglas/symfony-docker](https://github.com/dunglas/symfony-docker) with OpenAPI Helm setup to run in kubernetes.
+This is a copy from [dunglas/symfony-docker](https://github.com/dunglas/symfony-docker) with API Platform Helm setup to run in kubernetes.
 
 A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.
 
