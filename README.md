@@ -1,6 +1,6 @@
 # Symfony Docker + Kubernetes
 
-This is a copy from [dunglas/symfony-docker](https://github.com/dunglas/symfony-docker) with OpenAPI helm setup to run in kubernetes.
+This is a copy from [dunglas/symfony-docker](https://github.com/dunglas/symfony-docker) with OpenAPI Helm setup to run in kubernetes.
 
 A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.
 
@@ -19,6 +19,7 @@ A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony
 2. Run `make minikube.start`
 3. Run `make helm.install`
 4. Run `make kubectl.portforward`
+5. A test page will be available at http://localhost/lucky
 
 ## Features
 
