@@ -1,10 +1,12 @@
-# Symfony Docker
+# Symfony Docker + Kubernetes
+
+This is a copy from [dunglas/symfony-docker](https://github.com/dunglas/symfony-docker) with OpenAPI helm setup to run in kubernetes.
 
 A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.
 
 ![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
 
-## Getting Started
+## Getting Started (dev)
 
 1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
 2. Run `docker compose build --pull --no-cache` to build fresh images
@@ -12,14 +14,18 @@ A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony
 4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
 5. Run `docker compose down --remove-orphans` to stop the Docker containers.
 
+## Getting Started (prod minikube)
+1. Install Kubernetes and Minikube.
+2. Run `make minikube.start`
+3. Run `make helm.install`
+4. Run `make kubectl.portforward`
+
 ## Features
 
 * Production, development and CI ready
 * [Installation of extra Docker Compose services](docs/extra-services.md) with Symfony Flex
 * Automatic HTTPS (in dev and in prod!)
 * HTTP/2, HTTP/3 and [Preload](https://symfony.com/doc/current/web_link.html) support
-* Built-in [Mercure](https://symfony.com/doc/current/mercure.html) hub
-* [Vulcain](https://vulcain.rocks) support
 * Native [XDebug](docs/xdebug.md) integration
 * Just 2 services (PHP FPM and Caddy server)
 * Super-readable configuration
