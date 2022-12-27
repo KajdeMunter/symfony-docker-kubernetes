@@ -72,3 +72,7 @@ helm.uninstall: ## Uninstall helm symfony-test project
 	helm uninstall symfony-test
 
 helm.reinstall: helm.uninstall helm.install ## Reinstall helm symfony-test project
+
+kubectl.portforward: ## Forwards 443:443 to created pod
+	export POD_NAME=$$(kubectl get pods --namespace default -l "app.kubernetes.io/name=api-platform,app.kubernetes.io/instance=symfony-test" -o jsonpath="{.items[0].metadata.name}")
+	sudo kubectl --namespace default port-forward ${POD_NAME} 443:443
